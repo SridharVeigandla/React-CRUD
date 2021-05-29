@@ -5,6 +5,8 @@ function Add() {
     const [fno, setfno] = useState(10);
     const [sno, setsno] = useState(10);
     const [res, setRes] = useState(0);
+
+    
     function test() {
         setRes(parseInt(fno) + parseInt(sno));
     }
@@ -12,6 +14,11 @@ function Add() {
 
     function test1() {
         setRes(parseInt(fno) - parseInt(sno));
+    }
+
+    function test2(){
+
+        setRes(parseInt(fno)/parseInt(sno));
     }
 
 
@@ -35,6 +42,7 @@ function Add() {
             <input type="text" id="sno" name="sno" onChange={snoFun} value={sno} /><br /><br />
             <input type="button" value="Add" onClick={test} />
             <input type="button" value="sub" onClick={test1}/>
+            <input type="button" value="div" onClick={test2}/>
 
 
 
